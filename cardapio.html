@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - Burguer House</title>
+    
+    <!-- Link para a folha de estilos CSS -->
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+    <!-- 1. CABEÇALHO (Igual ao da página inicial para manter o padrão) -->
+    <header class="cabecalho">
+        <div class="container container-header">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <span class="logo-texto">Burguer <span class="destaque-amarelo">House</span></span>
+            </a>
+
+            <!-- Botão de menu no celular -->
+            <button class="btn-menu-mobile" id="btn-menu-mobile" aria-label="Abrir menu de navegação">
+                ☰
+            </button>
+
+            <!-- Menu de navegação (agora o Cardápio está com a classe "link-ativo") -->
+            <nav class="menu-navegacao" id="menu-navegacao">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="cardapio.html" class="link-ativo">Cardápio</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 2. CONTEÚDO PRINCIPAL DO CARDÁPIO -->
+    <main class="pagina-cardapio">
+        
+        <!-- Título principal da página -->
+        <section class="banner-pagina">
+            <div class="container">
+                <h1>Nosso Cardápio</h1>
+                <p>Ingredientes frescos, carnes grelhadas e combinações perfeitas.</p>
+            </div>
+        </section>
+
+        <div class="container">
+
+            <!-- CATEGORIA 1: Hambúrgueres Artesanais -->
+            <section class="secao-categoria">
+                <h2 class="titulo-categoria">Hambúrgueres Artesanais</h2>
+                <div class="grid-cardapio">
+                    
+                    <!-- Item 1 -->
+                    <article class="card-item">
+                        <img src="img/burger-classic.jpg" alt="House Classic Burger">
+                        <div class="item-info">
+                            <div class="item-cabecalho">
+                                <h3>House Classic</h3>
+                                <span class="item-preco">R$ 28,00</span>
+                            </div>
+                            <p class="item-descricao">Pão brioche, blend 160g, queijo cheddar fatiado, alface, tomate e maionese da casa.</p>
+                        </div>
+                    </article>
+
+                    <!-- Item 2 -->
+                    <article class="card-item">
+                        <img src="img/burger-bacon.jpg" alt="Bacon Monster Burger">
+                        <div class="item-info">
+                            <div class="item-cabecalho">
+                                <h3>Bacon Monster</h3>
+                                <span class="item-preco">R$ 34,00</span>
+                            </div>
+                            <p class="item-descricao">Pão australiano, blend 180g, muito bacon crocante, cheddar cremoso e cebola caramelizada.</p>
+                        </div>
+                    </article>
+
+                    <!-- Item 3 -->
+                    <article class="card-item">
+                        <img src="img/burger-duplo.jpg" alt="Duplo Cheddar Burger">
+                        <div class="item-info">
+                            <div class="item-cabecalho">
+                                <h3>Duplo Cheddar</h3>
+                                <span class="item-preco">R$ 38,00</span>
+                            </div>
+                            <p class="item-descricao">Pão com gergelim, 2 blends de 140g cada, dobro de queijo cheddar derretido e barbecue artesanal.</p>
+                        </div>
+                    </article>
+
+                    <!-- Item 4 -->
+                    <article class="card-item">
+                        <img src="img/burger-smash.jpg" alt="Smash Burger Simples">
+                        <div class="item-info">
+                            <div class="item-cabecalho">
+                                <h3>Smash Burger</h3>
+                                <span class="item-preco">R$ 24,00</span>
+                            </div>
+                            <p class="item-descricao">Pão de batata tostado na manteiga, 2 carnes smash prensadas de 90g, queijo prato e molho especial.</p>
+                        </div>
+                    </article>
+
+                    <!-- Item 5 -->
+                    <article class="card-item">
+                        <img src="img/burger-chicken.jpg" alt="Chicken Crispy Burger">
+                        <div class="item-info">
+                            <div class="item-cabecalho">
+                                <h3>Chicken Crispy</h3>
+                                <span class="item-preco">R$ 29,00</span>
+                            </div>
+                            <p class="item-descricao">Pão brioche, sobrecoxa de frango super empanada e crocante, salada coleslaw e maionese verde.</p>
+                        </div>
+                    </article>
+
+                    <!-- Item 6 -->
+                    <article class="card-item">
+                        <img src="img/burger-veggie.jpg" alt="Veggie House Burger">
+                        <div class="item-info">
+                            <div class="item-cabecalho">
+                                <h3>Veggie House</h3>
+                                <span class="item-preco">R$ 30,00</span>
+                            </div>
+                            <p class="item-descricao">Pão brioche, hambúrguer de grão-de-bico e cogumelos, queijo muçarela, rúcula e tomate seco.</p>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- CATEGORIA 2: Acompanhamentos e Porções -->
+            <section class="secao-categoria">
+                <h2 class="titulo-categoria">Acompanhamentos</h2>
+                <div class="grid-cardapio">
+                    
+                    <article class="card-item">
+                        <img src="img/porcao-batata.jpg" alt="Batatas Rústicas">
+                        <div class="item-info">
+                            <div class="item-cabecalho">
+                                <h3>Batata Rústica</h3>
+                                <span class="item-preco">R$ 18,00</span>
+                            </div>
+                            <p class="item-descricao">Batatas cortadas à mão com casca, temperadas com alecrim, alho e sal grosso.</p>
+                        </div>
+                    </article>
+
+                    <article class="card-item">
+                        <img src="img/porcao-batata-cheddar.jpg" alt="Batata com Cheddar e Bacon">
+                        <div class="item-info">
+                            <div class="item-cabecalho">
+                                <h3>Batata Especial</h3>
+                                <span class="item-preco">R$ 25,00</span>
+                            </div>
+                            <p class="item-descricao">Batata frita crocante coberta com calda generosa de queijo cheddar e farofa de bacon.</p>
+                        </div>
+                    </article>
+
+                    <article class="card-item">
+                        <img src="img/porcao-onion-rings.jpg" alt="Anéis de Cebola Empanados">
+                        <div class="item-info">
+                            <div class="item-cabecalho">
+                                <h3>Onion Rings</h3>
+                                <span class="item-preco">R$ 20,00</span>
+                            </div>
+                            <p class="item-descricao">Anéis de cebola dourados e super crocantes, acompanhados de molho barbecue da casa.</p>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- CATEGORIA 3: Bebidas -->
+            <section class="secao-categoria">
+                <h2 class="titulo-categoria">Bebidas</h2>
+                <div class="grid-cardapio">
+                    
+                    <article class="card-item">
+                        <img src="img/bebida-refri.jpg" alt="Refrigerante em Lata">
+                        <div class="item-info">
+                            <div class="item-cabecalho">
+                                <h3>Refrigerantes Lata</h3>
+                                <span class="item-preco">R$ 7,00</span>
+                            </div>
+                            <p class="item-descricao">Coca-Cola, Guaraná Antarctica, Sprite e Fanta Laranja (lata 350ml bem gelada).</p>
+                        </div>
+                    </article>
+
+                    <article class="card-item">
+                        <img src="img/bebida-suco.jpg" alt="Copo de Suco Natural">
+                        <div class="item-info">
+                            <div class="item-cabecalho">
+                                <h3>Sucos Naturais</h3>
+                                <span class="item-preco">R$ 9,00</span>
+                            </div>
+                            <p class="item-descricao">Laranja, limão espremido na hora ou maracujá (copo de 500ml).</p>
+                        </div>
+                    </article>
+
+                    <article class="card-item">
+                        <img src="img/bebida-cerveja.jpg" alt="Cerveja Artesanal">
+                        <div class="item-info">
+                            <div class="item-cabecalho">
+                                <h3>Cerveja Artesanal</h3>
+                                <span class="item-preco">R$ 16,00</span>
+                            </div>
+                            <p class="item-descricao">Estilos IPA ou Pilsen artesanais bem geladas (garrafa 355ml).</p>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- 3. RODAPÉ (Igual ao da página inicial) -->
+    <footer class="rodape">
+        <div class="container rodape-conteudo">
+            <p>&copy; 2026 <strong>Burguer House</strong>. Todos os direitos reservados.</p>
+            <p>Avenida dos Guaranis, 100 - Centro | Horário: 18h às 23h30</p>
+        </div>
+    </footer>
+
+    <!-- Arquivo JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Fotos - Burguer House</title>
+    
+    <!-- Link para a folha de estilos CSS -->
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+    <!-- 1. CABEÇALHO -->
+    <header class="cabecalho">
+        <div class="container container-header">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <span class="logo-texto">Burguer <span class="destaque-amarelo">House</span></span>
+            </a>
+
+            <!-- Botão de menu no celular -->
+            <button class="btn-menu-mobile" id="btn-menu-mobile" aria-label="Abrir menu de navegação">
+                ☰
+            </button>
+
+            <!-- Menu de navegação (Galeria agora está com a classe "link-ativo") -->
+            <nav class="menu-navegacao" id="menu-navegacao">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="cardapio.html">Cardápio</a></li>
+                    <li><a href="galeria.html" class="link-ativo">Galeria</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 2. CONTEÚDO PRINCIPAL DA GALERIA -->
+    <main class="pagina-galeria">
+        
+        <!-- Banner com o título da página -->
+        <section class="banner-pagina">
+            <div class="container">
+                <h1>Nossa Galeria</h1>
+                <p>Veja de perto os nossos hambúrgueres artesanais, porções crocantes e o clima da Burguer House.</p>
+            </div>
+        </section>
+
+        <!-- Galeria de Imagens organizadas em grade (colunas) -->
+        <section class="secao-galeria">
+            <div class="container">
+                
+                <div class="grid-galeria">
+                    
+                    <!-- Foto 1 -->
+                    <figure class="item-galeria">
+                        <img src="img/galeria-1.jpg" alt="Carne de hambúrguer artesanal sendo grelhada no fogo">
+                        <figcaption>Grelhado no fogo de verdade</figcaption>
+                    </figure>
+
+                    <!-- Foto 2 -->
+                    <figure class="item-galeria">
+                        <img src="img/galeria-2.jpg" alt="Hambúrguer com queijo cheddar escorrendo">
+                        <figcaption>Cheddar cremoso e quentinho</figcaption>
+                    </figure>
+
+                    <!-- Foto 3 -->
+                    <figure class="item-galeria">
+                        <img src="img/galeria-3.jpg" alt="Porção de batatas rústicas com tempero da casa">
+                        <figcaption>Batata rústica artesanal</figcaption>
+                    </figure>
+
+                    <!-- Foto 4 -->
+                    <figure class="item-galeria">
+                        <img src="img/galeria-4.jpg" alt="Hambúrguer com fatias crocantes de bacon">
+                        <figcaption>Bacon muito crocante</figcaption>
+                    </figure>
+
+                    <!-- Foto 5 -->
+                    <figure class="item-galeria">
+                        <img src="img/galeria-5.jpg" alt="Batatas fritas cobertas com queijo e bacon">
+                        <figcaption>Nossa batata especial da casa</figcaption>
+                    </figure>
+
+                    <!-- Foto 6 -->
+                    <figure class="item-galeria">
+                        <img src="img/galeria-6.jpg" alt="Smash burger com crostinha dourada">
+                        <figcaption>Smash com crostinha perfeita</figcaption>
+                    </figure>
+
+                    <!-- Foto 7 -->
+                    <figure class="item-galeria">
+                        <img src="img/galeria-7.jpg" alt="Porção de anéis de cebola dourados">
+                        <figcaption>Onion rings douradas</figcaption>
+                    </figure>
+
+                    <!-- Foto 8 -->
+                    <figure class="item-galeria">
+                        <img src="img/galeria-8.jpg" alt="Garrafa de cerveja artesanal bem gelada">
+                        <figcaption>Cerveja artesanal trincando</figcaption>
+                    </figure>
+
+                    <!-- Foto 9 -->
+                    <figure class="item-galeria">
+                        <img src="img/galeria-9.jpg" alt="Ambiente aconchegante da hamburgueria Burguer House">
+                        <figcaption>Ambiente rústico e acolhedor</figcaption>
+                    </figure>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 3. RODAPÉ -->
+    <footer class="rodape">
+        <div class="container rodape-conteudo">
+            <p>&copy; 2026 <strong>Burguer House</strong>. Todos os direitos reservados.</p>
+            <p>Avenida dos Guaranis, 100 - Centro | Horário: 18h às 23h30</p>
+        </div>
+    </footer>
+
+    <!-- Arquivo JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

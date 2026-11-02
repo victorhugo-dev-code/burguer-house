@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - Burguer House</title>
+    
+    <!-- Link para a folha de estilos CSS -->
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+    <!-- 1. CABEÇALHO -->
+    <header class="cabecalho">
+        <div class="container container-header">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <span class="logo-texto">Burguer <span class="destaque-amarelo">House</span></span>
+            </a>
+
+            <!-- Botão de menu no celular -->
+            <button class="btn-menu-mobile" id="btn-menu-mobile" aria-label="Abrir menu de navegação">
+                ☰
+            </button>
+
+            <!-- Menu de navegação (Sobre está com a classe "link-ativo") -->
+            <nav class="menu-navegacao" id="menu-navegacao">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="cardapio.html">Cardápio</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="sobre.html" class="link-ativo">Sobre</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 2. CONTEÚDO PRINCIPAL DA PÁGINA SOBRE -->
+    <main class="pagina-sobre">
+        
+        <!-- Banner de Título -->
+        <section class="banner-pagina">
+            <div class="container">
+                <h1>Nossa História</h1>
+                <p>Conheça a paixão e o cuidado por trás de cada hambúrguer que servimos.</p>
+            </div>
+        </section>
+
+        <!-- Seção: História com Texto e Imagem -->
+        <section class="secao-historia">
+            <div class="container historia-conteudo">
+                
+                <!-- Texto da História -->
+                <div class="historia-texto">
+                    <h2>Como tudo começou</h2>
+                    <p>A <strong>Burguer House</strong> nasceu em 2020 a partir do sonho de dois amigos apaixonados por culinária e pela cultura do verdadeiro hambúrguer na brasa. Cansados de lanches industriais e sem personalidade, decidimos criar receitas próprias na garagem de casa.</p>
+                    
+                    <p>Com o tempo, os amigos foram chamando mais amigos e o espaço ficou pequeno. Foi assim que abrimos nossa primeira loja física: um ambiente rústico, moderno, aconchegante e com cheirinho irresistível de carne grelhada.</p>
+                    
+                    <p>Hoje, nossa missão diária continua a mesma do primeiro dia: selecionar carnes nobres de primeira linha, moer diariamente na casa, assar na brasa viva e servir os pães mais macios e molhos especiais feitos artesanalmente.</p>
+                </div>
+
+                <!-- Imagem ilustrativa da história / cozinha -->
+                <div class="historia-imagem">
+                    <img src="img/sobre-hamburgueria.jpg" alt="Equipe da Burguer House preparando hambúrgueres artesanais">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Seção: Missão, Visão e Valores (3 Blocos) -->
+        <section class="secao-valores">
+            <div class="container">
+                <h2 class="titulo-secao">Nossos Pilares</h2>
+                
+                <div class="grid-valores">
+                    
+                    <!-- Bloco Missão -->
+                    <div class="card-valor">
+                        <h3>Nossa Missão</h3>
+                        <p>Proporcionar experiências gastronômicas marcantes, servindo hambúrgueres artesanais de altíssima qualidade em um ambiente acolhedor e com preço justo.</p>
+                    </div>
+
+                    <!-- Bloco Visão -->
+                    <div class="card-valor">
+                        <h3>Nossa Visão</h3>
+                        <p>Ser a hamburgueria mais amada da região, reconhecida pela excelência no atendimento, padrão artesanal e inovação constante em nossos sabores.</p>
+                    </div>
+
+                    <!-- Bloco Valores -->
+                    <div class="card-valor">
+                        <h3>Nossos Valores</h3>
+                        <p>Ingredientes sempre frescos, respeito incondicional aos clientes, transparência, higiene impecável e amor verdadeiro pela boa gastronomia.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 3. RODAPÉ -->
+    <footer class="rodape">
+        <div class="container rodape-conteudo">
+            <p>&copy; 2026 <strong>Burguer House</strong>. Todos os direitos reservados.</p>
+            <p>Avenida dos Guaranis, 100 - Centro | Horário: 18h às 23h30</p>
+        </div>
+    </footer>
+
+    <!-- Arquivo JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

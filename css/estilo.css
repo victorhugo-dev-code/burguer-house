@@ -1,0 +1,703 @@
+/* ========================================================
+   BURGUER HOUSE - FOLHA DE ESTILOS CSS
+   Cores do projeto:
+   - Fundo escuro: #141414 e #1f1f1f
+   - Vermelho: #e63946
+   - Amarelo: #ffb703
+   - Branco: #ffffff e cinza claro #d1d1d1
+======================================================== */
+
+/* 1. RESET E VARIÁVEIS BÁSICAS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-fundo: #121212;
+    --cor-fundo-card: #1e1e20;
+    --cor-fundo-cabecalho: #0a0a0a;
+    --cor-vermelho: #e63946;
+    --cor-vermelho-hover: #c92a37;
+    --cor-amarelo: #ffb703;
+    --cor-amarelo-hover: #e09f00;
+    --cor-texto: #ffffff;
+    --cor-texto-secundario: #b3b3b3;
+    --cor-borda: #2f2f35;
+    --fonte-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+/* Centralizador de conteúdo */
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Imagens responsivas por padrão */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+/* 2. BOTÕES GERAIS */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-vermelho {
+    background-color: var(--cor-vermelho);
+    color: #ffffff;
+}
+
+.btn-vermelho:hover {
+    background-color: var(--cor-vermelho-hover);
+}
+
+.btn-amarelo {
+    background-color: var(--cor-amarelo);
+    color: #121212;
+}
+
+.btn-amarelo:hover {
+    background-color: var(--cor-amarelo-hover);
+}
+
+/* 3. CABEÇALHO E MENU DE NAVEGAÇÃO */
+.cabecalho {
+    background-color: var(--cor-fundo-cabecalho);
+    border-bottom: 2px solid var(--cor-borda);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.logo-texto {
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.destaque-amarelo {
+    color: var(--cor-amarelo);
+}
+
+/* Lista do Menu no Computador */
+.menu-navegacao ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.menu-navegacao a {
+    color: var(--cor-texto-secundario);
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding: 6px 0;
+    position: relative;
+}
+
+.menu-navegacao a:hover,
+.menu-navegacao a.link-ativo {
+    color: var(--cor-amarelo);
+}
+
+/* Linha decorativa embaixo do link ativo */
+.menu-navegacao a.link-ativo::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--cor-vermelho);
+    border-radius: 2px;
+}
+
+/* Botão hambúrguer no celular (escondido no computador) */
+.btn-menu-mobile {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--cor-amarelo);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* 4. PÁGINA INICIAL (index.html) */
+
+/* Banner Principal (Hero) */
+.banner-principal {
+    padding: 70px 0;
+    background: linear-gradient(180deg, #18181a 0%, #121212 100%);
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.banner-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.banner-texto {
+    flex: 1;
+}
+
+.banner-texto h1 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.banner-texto p {
+    font-size: 1.2rem;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 30px;
+}
+
+.banner-imagem {
+    flex: 1;
+}
+
+.banner-imagem img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    border: 2px solid var(--cor-borda);
+}
+
+/* Seção de Hambúrgueres em Destaque */
+.destaques {
+    padding: 70px 0;
+}
+
+.titulo-secao {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.subtitulo-secao {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--cor-amarelo);
+    margin-bottom: 40px;
+}
+
+.grid-destaques {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card-burger {
+    background-color: var(--cor-fundo-card);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--cor-borda);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-burger:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+    border-color: var(--cor-vermelho);
+}
+
+.card-burger img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    background-color: #2b2b30;
+}
+
+.card-conteudo {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card-conteudo h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.card-conteudo p {
+    color: var(--cor-texto-secundario);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.card-rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.preco {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--cor-amarelo);
+}
+
+/* 5. BANNER DAS PÁGINAS INTERNAS */
+.banner-pagina {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), #1f1f23;
+    text-align: center;
+    padding: 50px 20px;
+    border-bottom: 1px solid var(--cor-borda);
+    margin-bottom: 40px;
+}
+
+.banner-pagina h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.banner-pagina p {
+    color: var(--cor-amarelo);
+    font-size: 1.1rem;
+}
+
+/* 6. PÁGINA CARDÁPIO (cardapio.html) */
+.secao-categoria {
+    margin-bottom: 60px;
+}
+
+.titulo-categoria {
+    font-size: 1.8rem;
+    color: var(--cor-vermelho);
+    border-bottom: 2px solid var(--cor-borda);
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+.grid-cardapio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card-item {
+    background-color: var(--cor-fundo-card);
+    border-radius: 10px;
+    border: 1px solid var(--cor-borda);
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card-item:hover {
+    border-color: var(--cor-amarelo);
+}
+
+.card-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    background-color: #2b2b30;
+}
+
+.item-info {
+    padding: 15px;
+}
+
+.item-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+}
+
+.item-cabecalho h3 {
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.item-preco {
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: var(--cor-amarelo);
+}
+
+.item-descricao {
+    color: var(--cor-texto-secundario);
+    font-size: 0.9rem;
+}
+
+/* 7. PÁGINA GALERIA (galeria.html) */
+.secao-galeria {
+    padding-bottom: 70px;
+}
+
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.item-galeria {
+    background-color: var(--cor-fundo-card);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--cor-borda);
+    transition: 0.3s;
+}
+
+.item-galeria:hover {
+    transform: scale(1.02);
+    border-color: var(--cor-vermelho);
+}
+
+.item-galeria img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    background-color: #2b2b30;
+}
+
+.item-galeria figcaption {
+    padding: 12px;
+    font-size: 0.95rem;
+    color: var(--cor-texto-secundario);
+    text-align: center;
+}
+
+/* 8. PÁGINA SOBRE (sobre.html) */
+.secao-historia {
+    padding-bottom: 60px;
+}
+
+.historia-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.historia-texto {
+    flex: 1;
+}
+
+.historia-texto h2 {
+    font-size: 2rem;
+    color: var(--cor-amarelo);
+    margin-bottom: 20px;
+}
+
+.historia-texto p {
+    color: var(--cor-texto-secundario);
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+}
+
+.historia-imagem {
+    flex: 1;
+}
+
+.historia-imagem img {
+    border-radius: 12px;
+    border: 2px solid var(--cor-borda);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    background-color: #2b2b30;
+}
+
+.secao-valores {
+    background-color: #171719;
+    padding: 60px 0;
+    margin-bottom: 60px;
+}
+
+.grid-valores {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.card-valor {
+    background-color: var(--cor-fundo-card);
+    padding: 30px 20px;
+    border-radius: 10px;
+    border: 1px solid var(--cor-borda);
+    text-align: center;
+}
+
+.icone-valor {
+    font-size: 2.5rem;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.card-valor h3 {
+    font-size: 1.3rem;
+    color: var(--cor-amarelo);
+    margin-bottom: 12px;
+}
+
+.card-valor p {
+    color: var(--cor-texto-secundario);
+    font-size: 0.95rem;
+}
+
+/* 9. PÁGINA CONTATO (contato.html) */
+.secao-contato {
+    padding-bottom: 70px;
+}
+
+.grid-contato {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.info-contato {
+    background-color: var(--cor-fundo-card);
+    padding: 35px;
+    border-radius: 12px;
+    border: 1px solid var(--cor-borda);
+}
+
+.info-contato h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: var(--cor-amarelo);
+}
+
+.descricao-info {
+    color: var(--cor-texto-secundario);
+    margin-bottom: 25px;
+}
+
+.bloco-info {
+    margin-bottom: 20px;
+}
+
+.bloco-info h3 {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.bloco-info p {
+    color: var(--cor-texto-secundario);
+    font-size: 0.95rem;
+}
+
+.links-redes {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.btn-rede {
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #2b2b30;
+    transition: 0.3s;
+}
+
+.btn-rede.instagram:hover {
+    background-color: #e1306c;
+}
+
+.btn-rede.facebook:hover {
+    background-color: #1877f2;
+}
+
+.btn-rede.whatsapp:hover {
+    background-color: #25d366;
+}
+
+/* Formulário de Contato */
+.formulario-contato {
+    background-color: var(--cor-fundo-card);
+    padding: 35px;
+    border-radius: 12px;
+    border: 1px solid var(--cor-borda);
+}
+
+.formulario-contato h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: var(--cor-vermelho);
+}
+
+.campo-grupo {
+    margin-bottom: 20px;
+}
+
+.campo-grupo label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.campo-grupo input,
+.campo-grupo select,
+.campo-grupo textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #141416;
+    border: 1px solid var(--cor-borda);
+    border-radius: 6px;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.campo-grupo input:focus,
+.campo-grupo select:focus,
+.campo-grupo textarea:focus {
+    border-color: var(--cor-amarelo);
+}
+
+.btn-enviar {
+    width: 100%;
+}
+
+.resposta-formulario {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+    display: none;
+}
+
+.resposta-formulario.sucesso {
+    display: block;
+    background-color: rgba(37, 211, 102, 0.15);
+    color: #25d366;
+    border: 1px solid #25d366;
+}
+
+/* 10. RODAPÉ */
+.rodape {
+    background-color: var(--cor-fundo-cabecalho);
+    border-top: 1px solid var(--cor-borda);
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.rodape-conteudo p {
+    color: var(--cor-texto-secundario);
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+/* 11. RESPONSIVIDADE (ADAPTAÇÃO PARA CELULARES) */
+@media (max-width: 768px) {
+    
+    /* Mostrar botão de menu no celular */
+    .btn-menu-mobile {
+        display: block;
+    }
+
+    /* Menu de navegação retrátil no mobile */
+    .menu-navegacao {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--cor-fundo-cabecalho);
+        border-bottom: 2px solid var(--cor-vermelho);
+        padding: 20px;
+    }
+
+    /* Quando ativado pelo JavaScript */
+    .menu-navegacao.ativo {
+        display: block;
+    }
+
+    .menu-navegacao ul {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    /* Hero Banner da página inicial */
+    .banner-conteudo {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .banner-texto h1 {
+        font-size: 2.1rem;
+    }
+
+    /* Colunas passam a ser 1 por linha */
+    .grid-destaques,
+    .grid-cardapio,
+    .grid-galeria,
+    .grid-valores,
+    .grid-contato,
+    .historia-conteudo {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+    }
+
+    .historia-imagem img {
+        margin-top: 20px;
+    }
+}

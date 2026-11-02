@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <!-- Faz com que a página se ajuste corretamente na tela de celulares e computadores -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burguer House - Hambúrguer Artesanal</title>
+    
+    <!-- Link para a folha de estilos CSS -->
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+    <!-- 1. CABEÇALHO (Topo da página com logo e menu) -->
+    <header class="cabecalho">
+        <div class="container container-header">
+            <!-- Logo da Hamburgueria -->
+            <a href="index.html" class="logo">
+                <span class="logo-texto">Burguer <span class="destaque-amarelo">House</span></span>
+            </a>
+
+            <!-- Botão para abrir o menu no celular (controlado pelo JavaScript) -->
+            <button class="btn-menu-mobile" id="btn-menu-mobile" aria-label="Abrir menu de navegação">
+                ☰
+            </button>
+
+            <!-- Menu de navegação entre as páginas -->
+            <nav class="menu-navegacao" id="menu-navegacao">
+                <ul>
+                    <li><a href="index.html" class="link-ativo">Início</a></li>
+                    <li><a href="cardapio.html">Cardápio</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 2. CONTEÚDO PRINCIPAL -->
+    <main>
+        <!-- Seção de Destaque / Banner Inicial (Hero) -->
+        <section class="banner-principal">
+            <div class="container banner-conteudo">
+                <div class="banner-texto">
+                    <h1>O autêntico hambúrguer artesanal</h1>
+                    <p>Feito na grelha com fogo de verdade, ingredientes frescos e aquele sabor inesquecível.</p>
+                    <a href="cardapio.html" class="btn btn-vermelho">Ver Cardápio Completo</a>
+                </div>
+                
+                <div class="banner-imagem">
+                    <!-- Espaço reservado para a foto principal de destaque -->
+                    <!-- Coloque uma foto bem bonita de hambúrguer na pasta /img com o nome "banner-burger.jpg" -->
+                    <img src="img/banner-burger.jpg" alt="Hambúrguer artesanal da Burguer House com queijo derretido e bacon">
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Hambúrgueres em Destaque -->
+        <section class="destaques">
+            <div class="container">
+                <h2 class="titulo-secao">Mais Pedidos</h2>
+                <p class="subtitulo-secao">Os queridinhos dos nossos clientes</p>
+
+                <!-- Grade onde ficarão os cards de hambúrguer -->
+                <div class="grid-destaques">
+                    
+                    <!-- Card 1 -->
+                    <article class="card-burger">
+                        <!-- Imagem do hambúrguer 1 (guardar em: img/burger-classic.jpg) -->
+                        <img src="img/burger-classic.jpg" alt="Foto do House Classic Burger">
+                        <div class="card-conteudo">
+                            <h3>House Classic</h3>
+                            <p>Pão brioche, blend 160g, queijo cheddar fatiado, alface crocante, tomate e molho especial.</p>
+                            <div class="card-rodape">
+                                <span class="preco">R$ 28,00</span>
+                                <a href="cardapio.html" class="btn btn-amarelo">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="card-burger">
+                        <!-- Imagem do hambúrguer 2 (guardar em: img/burger-bacon.jpg) -->
+                        <img src="img/burger-bacon.jpg" alt="Foto do Bacon Monster Burger">
+                        <div class="card-conteudo">
+                            <h3>Bacon Monster</h3>
+                            <p>Pão australiano, blend 180g, dobro de bacon crocante, cheddar cremoso e cebola caramelizada.</p>
+                            <div class="card-rodape">
+                                <span class="preco">R$ 34,00</span>
+                                <a href="cardapio.html" class="btn btn-amarelo">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="card-burger">
+                        <!-- Imagem do hambúrguer 3 (guardar em: img/burger-duplo.jpg) -->
+                        <img src="img/burger-duplo.jpg" alt="Foto do Duplo Cheddar Burger">
+                        <div class="card-conteudo">
+                            <h3>Duplo Cheddar</h3>
+                            <p>Pão com gergelim, 2 hambúrgueres de 140g, cheddar em dobro, bacon em cubos e barbecue.</p>
+                            <div class="card-rodape">
+                                <span class="preco">R$ 38,00</span>
+                                <a href="cardapio.html" class="btn btn-amarelo">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 3. RODAPÉ DA PÁGINA -->
+    <footer class="rodape">
+        <div class="container rodape-conteudo">
+            <p>&copy; 2026 <strong>Burguer House</strong>. Todos os direitos reservados.</p>
+            <p>Avenida dos Guaranis, 100 - Centro | Horário: 18h às 23h30</p>
+        </div>
+    </footer>
+
+    <!-- Arquivo JavaScript para funcionalidades como o menu de celular -->
+    <script src="js/script.js"></script>
+</body>
+</html>
